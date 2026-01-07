@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Soniya 🌷</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#ffd1dc, #ffe6eb);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+section {
+    display: none;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.active {
+    display: block;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: #d6336c;
+    font-size: 2.5em;
+}
+
+p {
+    font-size: 1.1em;
+    color: #444;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+button {
+    background: #ff4d6d;
+    border: none;
+    padding: 12px 28px;
+    color: white;
+    font-size: 1em;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e63956;
+    transform: scale(1.05);
+}
+
+.tulips {
+    font-size: 2em;
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.envelope {
+    font-size: 4em;
+    cursor: pointer;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.letter {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 750px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.poem {
+    white-space: pre-line;
+    font-style: italic;
+}
+
+.hearts span {
+    position: fixed;
+    bottom: -20px;
+    font-size: 20px;
+    animation: rise 6s infinite;
+}
+
+@keyframes rise {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+.bears {
+    font-size: 3em;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SECTION 1 -->
+<section class="active" id="s1">
+    <div class="tulips">🌷🌷🌷</div>
+    <h1>Hi Soniya</h1>
+    <p>
+        I just wanted to say something to you.<br>
+        I hope it makes sense.
+    </p>
+    <br>
+    <button onclick="next('s2')">Yes</button>
+    <button onclick="stay()">No</button>
+</section>
+
+<!-- SECTION 2 -->
+<section id="s2">
+    <h1>One small question…</h1>
+    <p>Can I say it?</p>
+    <button onclick="next('s3')">Yes</button>
+    <button onclick="stay()">No</button>
+</section>
+
+<!-- SECTION 3 -->
+<section id="s3">
+    <h1>❤️</h1>
+    <p>Tap the envelope</p>
+    <div class="envelope" onclick="next('s4')">💌</div>
+</section>
+
+<!-- SECTION 4 -->
+<section id="s4">
+    <div class="letter">
+        <p>
+            Hi Soniya,<br><br>
+
+            I know this might be cringe or weird for you,<br>
+            but I just wanted to confess my feelings.<br><br>
+
+            I want to thank you for coming into my life and being there.<br><br>
+
+            Silence has always been my favorite thing in the world.<br>
+            It’s nice to be alone.<br>
+            But now I want to be alone with you.<br><br>
+
+            I want to look at you in silence,<br>
+            lay there holding you,<br>
+            just hearing your heartbeat.<br><br>
+
+            Your hair between my fingers,<br>
+            your head on my chest,<br>
+            when we talk about your favorite movies.<br><br>
+
+            You are my favorite person in the world.<br>
+            You are very cool, pretty, beautiful, and smart.<br><br>
+
+            I just want to be with you,<br>
+            because it makes sense with you.<br>
+            Silence pani.<br><br>
+
+            I want to see you as the happiest person,<br>
+            because you deserve everything best in your life.
+        </p>
+    </div>
+    <button onclick="countdown()">Next</button>
+</section>
+
+<!-- SECTION 5 -->
+<section id="s5">
+    <h1 id="count">3</h1>
+</section>
+
+<!-- SECTION 6 -->
+<section id="s6">
+    <div class="letter poem">
+I like you in a quiet way,
+the way morning light
+touches a room
+without asking permission.
+
+I like how talking to you
+feels easy,
+like my thoughts finally
+have a safe place to land.
+
+Sometimes I catch myself smiling
+for no reason,
+and then I realize
+it’s because of you.
+
+I don’t rush this feeling.
+I let it grow slowly,
+because the best things
+always do.
+
+I like you when you laugh,
+when you talk about things you love,
+when you’re just being you
+without trying.
+
+And maybe that’s what this is
+not something loud or dramatic,
+just two people
+choosing each other,
+one moment at a time.
+
+If this turns into something more,
+I’d be grateful.
+And if it stays like this for a while,
+I’ll still be happy
+because liking you
+already feels like enough.
+    </div>
+    <button onclick="next('s7')">Next</button>
+</section>
+
+<!-- SECTION 7 -->
+<section id="s7">
+    <h1>Will you please be my girlfriend?</h1>
+    <div class="bears">🐻❤️🐻</div>
+    <button onclick="love()">Yes</button>
+    <button onclick="stay()">No</button>
+</section>
+
+<script>
+function next(id) {
+    document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+
+function stay() {
+    alert("Please think again 🌷");
+}
+
+function countdown() {
+    next('s5');
+    let c = 3;
+    let el = document.getElementById('count');
+    let timer = setInterval(() => {
+        c--;
+        el.innerText = c;
+        if (c === 0) {
+            clearInterval(timer);
+            next('s6');
+        }
+    }, 1000);
+}
+
+function love() {
+    next('s7');
+    for (let i = 0; i < 30; i++) {
+        let heart = document.createElement('span');
+        heart.innerHTML = '❤️';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+        heart.className = 'hearts';
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 6000);
+    }
+}
+</script>
+
+</body>
+</html>
